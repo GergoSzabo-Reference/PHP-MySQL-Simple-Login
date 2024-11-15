@@ -1,12 +1,47 @@
-body{
-    padding:50px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    padding: 50px;
+    margin: 0;
 }
-.container{
+
+.container {
     max-width: 600px;
-    margin:0 auto;
-    padding:50px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px; /* kerekített sarkak */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 24px 0px; /* árnyék */
+    transition: box-shadow 0.3s ease-in-out; /* simább áttetszés hoverkor */
 }
-.form-group{
-    margin-bottom:30px;
+
+.container:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 30px 0px; /* hover árnyék effekt */
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* inputoknál kerekített sarkak */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* keretszínhez áttetszés */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
 }

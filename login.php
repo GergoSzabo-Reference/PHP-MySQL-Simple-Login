@@ -1,5 +1,5 @@
 <?php
-session_start(); // elindítja a session kezelést, amely szükséges az adatcseréhez a felhasználói munkamenet során
+session_start(); // elindítja a session kezelést az adatkezeléshez
 if (isset($_SESSION["user"])) { // ha a felhasználó már be van jelentkezve (session-ben tárolt "user" kulccsal), átirányítja az index.php oldalra
    header("Location: index.php");
 }

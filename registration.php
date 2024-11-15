@@ -56,10 +56,10 @@ if (isset($_SESSION["user"])) { // ha a felhasználó már be van jelentkezve, �
             $sql = "INSERT INTO users (full_name, email, password) VALUES ( ?, ?, ? )";
             $stmt = mysqli_stmt_init($conn);
             $prepareStmt = mysqli_stmt_prepare($stmt, $sql);
-            if ($prepareStmt) {
+            if ($prepareStmt) { // sikeres regisztráció üzenet
                 mysqli_stmt_bind_param($stmt, "sss", $fullName, $email, $passwordHash); // adatokat köt a lekérdezéshez
                 mysqli_stmt_execute($stmt);
-                echo "<div class='alert alert-success'>you are registered successfully</div>"; // sikeres regisztráció üzenet
+                echo "<div class='alert alert-success'>you are registered successfully</div>";
             } else {
                 die("something went wrong");
             }
